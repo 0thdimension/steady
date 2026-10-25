@@ -1,0 +1,31 @@
+{
+  "name": "steady",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A calm, local-first daily tracker: goals with skip allowances, todos with #tags, focus timer, workouts, a gratitude journal and progress charts.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx tests/logic.test.ts && tsx tests/chart.test.ts",
+    "start": "npm run build && python launcher/steady.pyw",
+    "portable": "npm run build && python scripts/make_portable.py"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "tsx": "^4.22.4",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4"
+  }
+}
